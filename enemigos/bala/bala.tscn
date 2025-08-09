@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj2jpdfy2q2t0"]
+
+[ext_resource type="Script" uid="uid://dski21s2cjy7m" path="res://enemigos/bala/bala.gd" id="1_ag3k0"]
+[ext_resource type="Texture2D" uid="uid://chhjbsfgertfq" path="res://assets/bala.png" id="2_tqo1u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4wd0"]
+radius = 14.0
+height = 87.9999
+
+[node name="bala" type="Area2D"]
+position = Vector2(-256, -7)
+collision_layer = 2
+script = ExtResource("1_ag3k0")
+
+[node name="Bala" type="Sprite2D" parent="."]
+position = Vector2(4.00001, -16)
+rotation = -1.55509
+scale = Vector2(0.0416579, 0.0522785)
+texture = ExtResource("2_tqo1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_t4wd0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1anj77cv46nj"]
+
+[ext_resource type="Texture2D" uid="uid://bdm7psnblaasl" path="res://assets/ladder.png" id="1_1ut2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf48w"]
+size = Vector2(934, 56)
+
+[node name="Piso" type="StaticBody2D"]
+
+[node name="Bridge" type="Sprite2D" parent="."]
+position = Vector2(-30, 40)
+texture = ExtResource("1_1ut2q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-33, 38)
+shape = SubResource("RectangleShape2D_rf48w")

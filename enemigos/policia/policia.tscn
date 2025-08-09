@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb8pob5swtcit"]
+
+[ext_resource type="Script" uid="uid://77crjrs468x" path="res://enemigos/policia/policia.gd" id="1_ce5uf"]
+[ext_resource type="PackedScene" uid="uid://bj2jpdfy2q2t0" path="res://enemigos/bala/bala.tscn" id="2_8o2s2"]
+[ext_resource type="Texture2D" uid="uid://bj8h41optaqdc" path="res://assets/policia.png" id="3_wt7c5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_goeq0"]
+radius = 86.0
+height = 340.0
+
+[node name="policia" type="Area2D"]
+position = Vector2(-160, -56)
+script = ExtResource("1_ce5uf")
+bala_escena = ExtResource("2_8o2s2")
+
+[node name="Policia" type="Sprite2D" parent="."]
+position = Vector2(-151, 62.5)
+scale = Vector2(0.600806, 0.470313)
+texture = ExtResource("3_wt7c5")
+hframes = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(0.1, 0.1)
+
+[node name="bala" parent="." instance=ExtResource("2_8o2s2")]
+position = Vector2(-351, 49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-117, 67)
+shape = SubResource("CapsuleShape2D_goeq0")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(-743, -283)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

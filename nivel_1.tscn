@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://b118st6lnbwa5"]
+
+[ext_resource type="Texture2D" uid="uid://de8254kygmo0c" path="res://assets/oak_woods_v1.0/background/background_layer_2.png" id="1_6epq6"]
+[ext_resource type="PackedScene" uid="uid://bvneousam5gyt" path="res://Personaje/personaje.tscn" id="2_2lask"]
+[ext_resource type="FontFile" uid="uid://bgow8w3uotd0" path="res://Fuentes/Roboto-Italic-VariableFont_wdth,wght.ttf" id="2_320mp"]
+[ext_resource type="PackedScene" uid="uid://cmy7ralx1d57w" path="res://Floors/piso.tscn" id="2_eciuy"]
+[ext_resource type="PackedScene" uid="uid://wf0n66sdb1y8" path="res://objetos/moneda.tscn" id="3_2lask"]
+[ext_resource type="PackedScene" uid="uid://dksv7jkpryqrd" path="res://puerta.tscn" id="4_m2gv8"]
+[ext_resource type="PackedScene" uid="uid://c3cm7c7abdl2g" path="res://plataforma_m.tscn" id="6_kd3qp"]
+
+[node name="Nivel 1" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="."]
+position = Vector2(1003, -886)
+scale = Vector2(58.2063, 45.0611)
+texture = ExtResource("1_6epq6")
+
+[node name="Puerta" parent="." instance=ExtResource("4_m2gv8")]
+position = Vector2(1549, -584)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -111.0
+offset_right = 559.0
+offset_bottom = 40.0
+
+[node name="ContadorMonedas" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -2193.0
+offset_top = -2290.0
+offset_right = -2057.0
+offset_bottom = -1699.0
+theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_font_sizes/font_size = 250
+text = "0
+"
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -3403.0
+offset_top = -2444.0
+offset_right = -2337.0
+offset_bottom = -1853.0
+theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_font_sizes/font_size = 250
+text = "Monedas:
+"
+
+[node name="Personaje" parent="." instance=ExtResource("2_2lask")]
+position = Vector2(30, 71)
+
+[node name="Piso" parent="." instance=ExtResource("2_eciuy")]
+position = Vector2(122, 113)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
+
+[node name="Moneda" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(738, -111)
+
+[node name="Moneda2" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-2360, -588)
+
+[node name="Moneda10" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(403, -1888)
+
+[node name="Moneda9" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-5466, -2124)
+
+[node name="Moneda7" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-563, -1740)
+
+[node name="Moneda8" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-1348, -1705)
+
+[node name="Moneda6" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-2744, -490)
+
+[node name="Moneda3" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(3836, -362)
+
+[node name="Moneda5" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(2427, -106)
+
+[node name="Moneda4" parent="." instance=ExtResource("3_2lask")]
+position = Vector2(-3679, -1356)
+
+[node name="plataforma-M" parent="." instance=ExtResource("6_kd3qp")]
+position = Vector2(-1753, -248)
+
+[node name="plataforma-M2" parent="." instance=ExtResource("6_kd3qp")]
+position = Vector2(-4501, -1075)
+
+[connection signal="moneda_agarrada" from="Moneda" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda2" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda2" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda10" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda10" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda9" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda9" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda7" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda7" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda8" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda8" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda6" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda6" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda3" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda3" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda5" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda5" to="Personaje" method="_on_moneda_moneda_agarrada"]
+[connection signal="moneda_agarrada" from="Moneda4" to="Personaje" method="agregar_moneda"]
+[connection signal="moneda_agarrada" from="Moneda4" to="Personaje" method="_on_moneda_moneda_agarrada"]
