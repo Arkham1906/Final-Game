@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dksv7jkpryqrd"]
 
-[ext_resource type="Script" uid="uid://7ja7m5l7j2s4" path="res://puerta.gd" id="1_8gvf5"]
+[ext_resource type="Script" uid="uid://7ja7m5l7j2s4" path="res://scripts/puerta.gd" id="1_8gvf5"]
 [ext_resource type="Texture2D" uid="uid://h7cact3ncbr7" path="res://assets/Puertas.png" id="1_bek8y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bek8y"]

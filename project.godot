@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Juego-PE"
-run/main_scene="uid://b118st6lnbwa5"
+run/main_scene="uid://bulqjkew21v0b"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SaveManager="*res://scripts/SaveManager.gd"
 
 [dotnet]
 

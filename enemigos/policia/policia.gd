@@ -15,5 +15,12 @@ func _on_Timer_timeout():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		queue_free()
+		call_deferred("queue_free") # Elimina después, sin romper la física
 		get_tree().current_scene.get_node("MensajeFinal").visible = true
+		SaveManager.save_game(
+			body.global_position,
+			body.monedas,
+			body.salto,
+			body.collected_coins,
+			true # Victoria
+		)

@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://bgow8w3uotd0" path="res://Fuentes/Roboto-Italic-VariableFont_wdth,wght.ttf" id="2_320mp"]
 [ext_resource type="PackedScene" uid="uid://cmy7ralx1d57w" path="res://Floors/piso.tscn" id="2_eciuy"]
 [ext_resource type="PackedScene" uid="uid://wf0n66sdb1y8" path="res://objetos/moneda.tscn" id="3_2lask"]
-[ext_resource type="PackedScene" uid="uid://dksv7jkpryqrd" path="res://puerta.tscn" id="4_m2gv8"]
-[ext_resource type="PackedScene" uid="uid://c3cm7c7abdl2g" path="res://plataforma_m.tscn" id="6_kd3qp"]
+[ext_resource type="PackedScene" uid="uid://dksv7jkpryqrd" path="res://objetos/puerta.tscn" id="4_m2gv8"]
+[ext_resource type="PackedScene" uid="uid://c3cm7c7abdl2g" path="res://objetos/plataforma_m.tscn" id="6_kd3qp"]
 
 [node name="Nivel 1" type="Node2D"]
 position = Vector2(-1, 0)
@@ -37,19 +37,30 @@ theme_override_font_sizes/font_size = 250
 text = "0
 "
 
-[node name="Label" type="Label" parent="UI"]
+[node name="ContadorNivel" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -3403.0
-offset_top = -2444.0
-offset_right = -2337.0
-offset_bottom = -1853.0
+anchor_left = 2.572
+anchor_top = -14.401
+anchor_right = 2.572
+anchor_bottom = -14.401
+offset_left = -723.748
+offset_top = -117.449
+offset_right = 723.252
+offset_bottom = 117.551
 theme_override_fonts/font = ExtResource("2_320mp")
-theme_override_font_sizes/font_size = 250
-text = "Monedas:
-"
+theme_override_font_sizes/font_size = 200
+text = "Nivel:1"
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -3107.0
+offset_top = -2265.0
+offset_right = -2254.0
+offset_bottom = -2030.0
+theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_font_sizes/font_size = 200
+text = "Monedas:"
 
 [node name="Personaje" parent="." instance=ExtResource("2_2lask")]
 position = Vector2(30, 71)
@@ -60,41 +71,41 @@ position = Vector2(122, 113)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
 
-[node name="Moneda" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(738, -111)
 
-[node name="Moneda2" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda2" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-2360, -588)
 
-[node name="Moneda10" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda10" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(403, -1888)
 
-[node name="Moneda9" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda9" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-5466, -2124)
 
-[node name="Moneda7" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda7" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-563, -1740)
 
-[node name="Moneda8" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda8" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-1348, -1705)
 
-[node name="Moneda6" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda6" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-2744, -490)
 
-[node name="Moneda3" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda3" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(3836, -362)
 
-[node name="Moneda5" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda5" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(2427, -106)
 
-[node name="Moneda4" parent="." instance=ExtResource("3_2lask")]
+[node name="Moneda4" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
 position = Vector2(-3679, -1356)
-
-[node name="plataforma-M" parent="." instance=ExtResource("6_kd3qp")]
-position = Vector2(-1753, -248)
 
 [node name="plataforma-M2" parent="." instance=ExtResource("6_kd3qp")]
 position = Vector2(-4501, -1075)
+
+[node name="plataforma-M" parent="plataforma-M2" instance=ExtResource("6_kd3qp")]
+position = Vector2(2748, 827)
 
 [connection signal="moneda_agarrada" from="Moneda" to="Personaje" method="agregar_moneda"]
 [connection signal="moneda_agarrada" from="Moneda" to="Personaje" method="_on_moneda_moneda_agarrada"]
