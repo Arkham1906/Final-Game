@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var nivel_siguiente: String = "res://Nivel2.tscn"
+@export var nivel_siguiente: String = "res://Niveles/Nivel2.tscn"
 
 func _on_body_entered(body):
 	if body.is_in_group("jugador"):

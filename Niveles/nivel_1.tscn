@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b118st6lnbwa5"]
 
-[ext_resource type="Texture2D" uid="uid://de8254kygmo0c" path="res://assets/oak_woods_v1.0/background/background_layer_2.png" id="1_6epq6"]
-[ext_resource type="PackedScene" uid="uid://bvneousam5gyt" path="res://Personaje/personaje.tscn" id="2_2lask"]
-[ext_resource type="FontFile" uid="uid://bgow8w3uotd0" path="res://Fuentes/Roboto-Italic-VariableFont_wdth,wght.ttf" id="2_320mp"]
-[ext_resource type="PackedScene" uid="uid://cmy7ralx1d57w" path="res://Floors/piso.tscn" id="2_eciuy"]
-[ext_resource type="PackedScene" uid="uid://wf0n66sdb1y8" path="res://objetos/moneda.tscn" id="3_2lask"]
-[ext_resource type="PackedScene" uid="uid://dksv7jkpryqrd" path="res://objetos/puerta.tscn" id="4_m2gv8"]
-[ext_resource type="PackedScene" uid="uid://c3cm7c7abdl2g" path="res://objetos/plataforma_m.tscn" id="6_kd3qp"]
+[ext_resource type="Texture2D" uid="uid://de8254kygmo0c" path="res://assets/oak_woods_v1.0/background/background_layer_2.png" id="1_sgxf1"]
+[ext_resource type="PackedScene" uid="uid://dksv7jkpryqrd" path="res://objetos/puerta.tscn" id="2_welvf"]
+[ext_resource type="FontFile" uid="uid://bgow8w3uotd0" path="res://Fuentes/Roboto-Italic-VariableFont_wdth,wght.ttf" id="3_4r1lh"]
+[ext_resource type="PackedScene" uid="uid://bvneousam5gyt" path="res://Personaje/personaje.tscn" id="4_5drqo"]
+[ext_resource type="PackedScene" uid="uid://cmy7ralx1d57w" path="res://Floors/piso.tscn" id="5_m401e"]
+[ext_resource type="PackedScene" uid="uid://wf0n66sdb1y8" path="res://objetos/moneda.tscn" id="6_akywv"]
+[ext_resource type="PackedScene" uid="uid://c3cm7c7abdl2g" path="res://objetos/plataforma_m.tscn" id="7_wsubd"]
 
 [node name="Nivel 1" type="Node2D"]
 position = Vector2(-1, 0)
@@ -14,9 +14,9 @@ position = Vector2(-1, 0)
 [node name="BackgroundLayer2" type="Sprite2D" parent="."]
 position = Vector2(1003, -886)
 scale = Vector2(58.2063, 45.0611)
-texture = ExtResource("1_6epq6")
+texture = ExtResource("1_sgxf1")
 
-[node name="Puerta" parent="." instance=ExtResource("4_m2gv8")]
+[node name="Puerta" parent="." instance=ExtResource("2_welvf")]
 position = Vector2(1549, -584)
 
 [node name="UI" type="Control" parent="."]
@@ -32,7 +32,7 @@ offset_left = -2193.0
 offset_top = -2290.0
 offset_right = -2057.0
 offset_bottom = -1699.0
-theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_fonts/font = ExtResource("3_4r1lh")
 theme_override_font_sizes/font_size = 250
 text = "0
 "
@@ -48,7 +48,7 @@ offset_left = -723.748
 offset_top = -117.449
 offset_right = 723.252
 offset_bottom = 117.551
-theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_fonts/font = ExtResource("3_4r1lh")
 theme_override_font_sizes/font_size = 200
 text = "Nivel:1"
 
@@ -58,53 +58,53 @@ offset_left = -3107.0
 offset_top = -2265.0
 offset_right = -2254.0
 offset_bottom = -2030.0
-theme_override_fonts/font = ExtResource("2_320mp")
+theme_override_fonts/font = ExtResource("3_4r1lh")
 theme_override_font_sizes/font_size = 200
 text = "Monedas:"
 
-[node name="Personaje" parent="." instance=ExtResource("2_2lask")]
+[node name="Personaje" parent="." instance=ExtResource("4_5drqo")]
 position = Vector2(30, 71)
 
-[node name="Piso" parent="." instance=ExtResource("2_eciuy")]
+[node name="Piso" parent="." instance=ExtResource("5_m401e")]
 position = Vector2(122, 113)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
 
-[node name="Moneda" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(738, -111)
 
-[node name="Moneda2" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda2" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-2360, -588)
 
-[node name="Moneda10" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda10" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(403, -1888)
 
-[node name="Moneda9" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda9" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-5466, -2124)
 
-[node name="Moneda7" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda7" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-563, -1740)
 
-[node name="Moneda8" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda8" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-1348, -1705)
 
-[node name="Moneda6" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda6" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-2744, -490)
 
-[node name="Moneda3" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda3" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(3836, -362)
 
-[node name="Moneda5" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda5" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(2427, -106)
 
-[node name="Moneda4" parent="." groups=["Coins"] instance=ExtResource("3_2lask")]
+[node name="Moneda4" parent="." groups=["Coins"] instance=ExtResource("6_akywv")]
 position = Vector2(-3679, -1356)
 
-[node name="plataforma-M2" parent="." instance=ExtResource("6_kd3qp")]
+[node name="plataforma-M2" parent="." instance=ExtResource("7_wsubd")]
 position = Vector2(-4501, -1075)
 
-[node name="plataforma-M" parent="plataforma-M2" instance=ExtResource("6_kd3qp")]
+[node name="plataforma-M" parent="plataforma-M2" instance=ExtResource("7_wsubd")]
 position = Vector2(2748, 827)
 
 [connection signal="moneda_agarrada" from="Moneda" to="Personaje" method="agregar_moneda"]

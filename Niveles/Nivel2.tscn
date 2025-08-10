@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddobfxm2ldf3w"]
+
+[ext_resource type="Texture2D" uid="uid://b4r7o6gfk8l5b" path="res://assets/Stringast/background_0.png" id="1_44uuh"]
+[ext_resource type="PackedScene" uid="uid://cmy7ralx1d57w" path="res://Floors/piso.tscn" id="2_kptxf"]
+[ext_resource type="PackedScene" uid="uid://bvneousam5gyt" path="res://Personaje/personaje.tscn" id="3_xxma6"]
+[ext_resource type="PackedScene" uid="uid://cb8pob5swtcit" path="res://enemigos/policia/policia.tscn" id="4_6kcc8"]
+[ext_resource type="PackedScene" uid="uid://hj3bkii73vn" path="res://objetos/blindada.tscn" id="5_i2n6v"]
+[ext_resource type="FontFile" uid="uid://bgow8w3uotd0" path="res://Fuentes/Roboto-Italic-VariableFont_wdth,wght.ttf" id="6_c0mop"]
+
+[node name="Nivel2" type="Node2D"]
+position = Vector2(555, 301)
+
+[node name="Background0" type="Sprite2D" parent="."]
+position = Vector2(5.00012, -9.00012)
+scale = Vector2(13.2873, 11.7965)
+texture = ExtResource("1_44uuh")
+
+[node name="Piso" parent="." instance=ExtResource("2_kptxf")]
+position = Vector2(-931, 203)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Personaje" parent="." instance=ExtResource("3_xxma6")]
+position = Vector2(-1467, 153)
+
+[node name="policia" parent="." instance=ExtResource("4_6kcc8")]
+position = Vector2(1624, -8)
+
+[node name="blindada" parent="." instance=ExtResource("5_i2n6v")]
+position = Vector2(-239, 68)
+
+[node name="MensajeFinal" type="Label" parent="."]
+visible = false
+offset_left = -394.0
+offset_top = -657.0
+offset_right = 1657.0
+offset_bottom = -363.0
+theme_override_fonts/font = ExtResource("6_c0mop")
+theme_override_font_sizes/font_size = 250
+text = "Juego Completado"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ContadorMonedas" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
