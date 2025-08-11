@@ -44,19 +44,23 @@ Este es el sprite del policia que sera el jefe final del juego.
 ---
 
 ![Puerta](assets/puertas.jpg)
+
 De aqui sale el sprite de la puerta para acceder al nivel 2.
 
 ---
 
 ![Background](assets/oak_woods_v1.0/background/background_layer_2.png)
+
 Es el background que tienen el primer nivel.
 
 ---
 
-![Background](assets/oak_woods_v1.0/Stringast/background_0.png)
+![Background](assets/Stringast/background_0.png)
+
 Es el background que tiene el segundo nivel.
 
 ---
 
-![Background](assets/oak_woods_v1.0/Stringast/background_2.png)
+![Background](assets/Stringast/background_2.png)
+
 Es el pasto donde es el area invencible.
