@@ -31,7 +31,6 @@ func _ready():
 			if save_data.has("victory") and save_data["victory"]:
 				get_tree().current_scene.get_node("MensajeFinal").visible = true
 		else:
-			# Nuevo nivel, no cargar posición ni monedas guardadas
 			monedas = 0
 			collected_coins = []
 			label_monedas.text = "0"
@@ -47,10 +46,10 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 
 	var direccion = Vector2.ZERO
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_key_pressed(KEY_D):
 		direccion.x += 1
 		animated_sprite.play("caminar_derecha")
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_key_pressed(KEY_A):
 		direccion.x -= 1
 		animated_sprite.play("caminar_izquierda")
 	else:

@@ -11,4 +11,4 @@ func _on_body_entered(body):
 			print("Protegido por plataforma blindada. No hay daño.")
 		else:
 			get_tree().reload_current_scene()
-		call_deferred("queue_free") # Eliminar la bala después de que termine el paso de física
+		call_deferred("queue_free")
