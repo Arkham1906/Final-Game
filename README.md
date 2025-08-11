@@ -17,3 +17,5 @@ Cuando se alcance una cantidad específica de monedas, el jugador desbloqueará 
 - 🛠 Desarrollado íntegramente en **Godot Engine**.  
 
 ---
+## 🖼️ Assets
+![Bala](assets/bala.png)
