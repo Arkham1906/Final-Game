@@ -19,16 +19,19 @@ Cuando se alcance una cantidad específica de monedas, el jugador desbloqueará 
 ---
 ## 🖼️ Assets
 ![Bala](assets/bala.png)
+
 Este es el asset de la bala que dispara el policia.
 
 ---
 
 ![Bridge](assets/bridge.png)
+
 Este es el asset del piso de los 2 niveles.
 
 ---
 
 ![Personaje](assets/Character_001.png)
+
 Este es el sprite del personaje donde salen sus animaciones.
 
 ---
